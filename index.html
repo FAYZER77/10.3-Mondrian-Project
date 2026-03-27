@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mondrian Project</title>
+        <style>
+            body {
+                margin: 0px;
+            }
+            #outer-flex-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100vw;
+                height: 100vh;
+            }
+            #master-grid-container {
+                display: grid;
+                background-color: #000;
+                width: 748px;
+                height: 748px;
+                grid-template-columns: 320px auto;
+                grid-template-rows: 414px auto;
+                grid-auto-rows: 20px;
+                grid-auto-columns: 50px;
+                gap: 9px;
+            }
+            .white {
+                background-color: #f0f1ec;
+            }
+            .red {
+                background-color: #e72f24;
+            }
+            .black {
+                background-color: #232629;
+                width: 153px;
+            }
+            .blue {
+                background-color: #004592;
+                height: 120px;
+                width: 50px;
+                border-bottom: solid 10px;
+            }
+            .yellow {
+                background-color: #f9d01e;
+                width: 198px;
+            }
+            .spanned-column {
+                grid-column: span 2;
+            }
+            .extra-column-flexbox {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                grid-column-start: 3;
+                grid-column-end: 4;
+                grid-row-start: 2;
+                grid-row-end: 4;
+                gap: 9px;
+            }
+            .extra-column-white {
+                background-color: #f0f1ec;
+                width: 50px;
+                height: 185px;
+            }
+            .extra-row-flexbox {
+                display: flex;
+                justify-content: space-between;
+                gap: 9px;
+                flex-direction: row;
+            }
+            /*Write your CSS here
+            Gap Colour: #000
+            White: #F0F1EC
+            Red: #E72F24
+            Black: #232629
+            Blue: #004592
+            Yellow: #F9D01E
+
+            For dimensions, see dimensions.png image.
+            HINT: Remember you can't change the properties of grid lines.
+            But grid lines are transparent!
+            */
+        </style>
+    </head>
+
+    <body>
+        <div id="outer-flex-container">
+            <div id="master-grid-container">
+                <div class="red"></div>
+                <div class="white spanned-column"></div>
+                <div class="white"></div>
+                <div class="white"></div>
+                <div class="extra-column-flexbox">
+                    <div class="blue"></div>
+                    <div class="extra-column-white"></div>
+                </div>
+                <div class="white"></div>
+                <div class="extra-row-flexbox">
+                    <div class="yellow"></div>
+                    <div class="black"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
